@@ -92,7 +92,24 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
-
+let evenRunners = []; //checks if the id remainder is 0 a.k.a even and pushes it into evenrunners
+runners.forEach((i) => {
+  if(i.id % 2 == 0){
+    evenRunners.push(i);
+  }
+});
+console.log(evenRunners);
 // Problem 2
-
+let oddRunners = [];
+runners.map((i) =>{
+  if(i.id % 2 != 1)
+    oddRunners.push(i);
+});
+console.log(oddRunners);
 // Problem 3
+let bigSpenders = [];
+runners.filter((i) =>{
+  if(i.donation >= 50)
+    bigSpenders.push(i);
+});
+console.log(bigSpenders);
