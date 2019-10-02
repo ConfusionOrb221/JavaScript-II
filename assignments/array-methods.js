@@ -100,14 +100,14 @@ runners.forEach((i) => {
 });
 console.log(evenRunners);
 // Problem 2
-let oddRunners = [];
+let oddRunners = []; //checks if the id remainder is not 0 aka odd and pushes it
 runners.map((i) =>{
-  if(i.id % 2 != 1)
+  if(i.id % 2 != 0)
     oddRunners.push(i);
 });
 console.log(oddRunners);
 // Problem 3
-let bigSpenders = [];
+let bigSpenders = []; //filters the big donation spenders
 runners.filter((i) =>{
   if(i.donation >= 50)
     bigSpenders.push(i);

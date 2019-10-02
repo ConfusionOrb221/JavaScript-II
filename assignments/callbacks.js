@@ -40,23 +40,23 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 
 function getLength(arr, cb) {
-  cb(arr.length);
+  return cb(arr.length);
 }
 
 function last(arr, cb) {
-  cb(arr.length - 1);
+  return cb(arr.length - 1);
 }
 
 function sumNums(x, y, cb) {
-  cb(x + y);
+  return cb(x + y);
 }
 
 function multiplyNums(x, y, cb) {
-  cb(x * y);
+  return cb(x * y);
 }
 
 function contains(item, list, cb) {
-  cb(list.includes(item));
+  return cb(list.includes(item));
 }
 
 /* STRETCH PROBLEM */
@@ -67,7 +67,7 @@ function removeDuplicates(array, cb) {
     return a;
   },[]);
 
-  cb(unique);
+  return cb(unique);
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
