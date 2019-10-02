@@ -42,15 +42,21 @@ function counterMakerLimit(limit){
   let counts = 0;
   const counterLimit = function(){
     if(counts == limit){
-      counts = 1;
+      return counts = 1;
     }
     counts = counts + 1;
     return counts;
   }
   return counterLimit;
 }
-const myCounterLimit = counterMakerLimit();
-console.log(myCounterLimit(5));
+var myCounterLimit = counterMakerLimit(5);
+console.log(myCounterLimit());
+console.log(myCounterLimit());
+console.log(myCounterLimit());
+console.log(myCounterLimit());
+console.log(myCounterLimit());
+console.log(myCounterLimit());
+console.log(myCounterLimit());
 
 
 // ==== Challenge 4: Create a counter function with an object that can increment and decrement ====
